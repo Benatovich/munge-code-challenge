@@ -18,7 +18,11 @@ OUTPUT:
 ]*/
 
 export function getDogs(arr) {
-    return [];
+    return arr.filter(item => {
+        if(item.type === 'dog') {
+            return true;
+        }
+    });
 }
 
 /*
@@ -27,7 +31,9 @@ OUTPUT:
 */
 
 export function getNamesOfDogs(arr) {
-    return [];
+    return arr
+        .filter(item => item.type === 'dog')
+        .map(item => item.name);
 }
 
 
@@ -38,7 +44,7 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    return arr.map(item => item.name);
 }
 
 /*
@@ -48,7 +54,9 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    return arr
+        .map(item => item.type)
+        .reverse();
 }
 
 /*
